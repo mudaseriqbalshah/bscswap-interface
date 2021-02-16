@@ -253,7 +253,7 @@ export default function Swap() {
     <>
       {showWarning && <TokenWarningCards currencies={currencies} />}
       <AppBody disabled={showWarning}>
-        <SwapPoolTabs active={'swap'} />
+        {/* <SwapPoolTabs active={'swap'} /> */}
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}
