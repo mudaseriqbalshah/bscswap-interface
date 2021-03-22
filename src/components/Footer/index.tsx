@@ -3,19 +3,20 @@ import styled from 'styled-components'
 import FooteLinkIcon from '../../assets/images/footerLink_icon.png'
 import FighterIcon from '../../assets/images/fighter-icon.png'
 import BLogo from '../../assets/images/binance-logo.png'
+import ELogo from '../../assets/images/etherLOGO.png'
 import './Footer.css'
 const Link02: React.FC = () => {
     return (
         <FLink02B>
-        <StyledAbsoluteLinkB href="#" >Powered by Atom Foundation:</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="https://jointer.io" target="_blank">Jointer.io</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="#" >BSCbonus.com</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="#" >SmartSwap.exchange</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="#" >ZERO/1</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="#" >DegenSwap.io</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="#" >ElementZero.network</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="#" >Packey.insure</StyledAbsoluteLinkB> |
-        <StyledAbsoluteLinkB href="#" >Mass.investments</StyledAbsoluteLinkB>
+            <StyledAbsoluteLinkB href="#" >Powered by Atom Foundation:</StyledAbsoluteLinkB> |
+            <StyledAbsoluteLinkB href="https://jointer.io" target="_blank">Jointer.io</StyledAbsoluteLinkB> |
+            {/* <StyledAbsoluteLinkB href="#" >BSCbonus.com</StyledAbsoluteLinkB> | */}
+            <StyledAbsoluteLinkB href="#" >SmartSwap.exchange</StyledAbsoluteLinkB> |
+            <StyledAbsoluteLinkB href="#" >ZERO/1</StyledAbsoluteLinkB> |
+            <StyledAbsoluteLinkB href="#" >DegenSwap.io</StyledAbsoluteLinkB> |
+            <StyledAbsoluteLinkB href="#" >ElementZero.network</StyledAbsoluteLinkB> |
+            <StyledAbsoluteLinkB href="#" >Packey.insure</StyledAbsoluteLinkB> |
+            <StyledAbsoluteLinkB href="#" >Mass.investments</StyledAbsoluteLinkB>
 
         </FLink02B>
     )
@@ -25,14 +26,16 @@ const Link01: React.FC = () => {
     return (
       <FLink01B>
         <StyledAbsoluteLinkA href="#" >List new token</StyledAbsoluteLinkA> |
-        <StyledAbsoluteLinkA href="#" >Upgrade to v2</StyledAbsoluteLinkA> |
+        <StyledAbsoluteLinkA href="https://elementzero.network/bscswap_upgrade/" target="_blank" >Upgrade to v2</StyledAbsoluteLinkA> |
+        <StyledAbsoluteLinkA href="#" target="_blank" >LaunchField</StyledAbsoluteLinkA> |
         <StyledAbsoluteLinkA href="#" >Voting</StyledAbsoluteLinkA> |
-        <StyledAbsoluteLinkA href="#" >Github</StyledAbsoluteLinkA> |
-        <StyledAbsoluteLinkA href="#" >Medium</StyledAbsoluteLinkA> |
-        <StyledAbsoluteLinkA href="#" >Telegram</StyledAbsoluteLinkA> |
-        <StyledAbsoluteLinkA href="#" >Twitter</StyledAbsoluteLinkA> |
-        <StyledAbsoluteLinkA href="#" >Discord</StyledAbsoluteLinkA> |
-        <StyledIcon01 href="#"></StyledIcon01>
+        <StyledAbsoluteLinkA href="https://github.com/bscswap/contracts" target="_blank" >Github</StyledAbsoluteLinkA> |
+        <StyledAbsoluteLinkA href="https://bscswapprotocol.medium.com/" target="_blank" >Medium</StyledAbsoluteLinkA> |
+        <StyledAbsoluteLinkA href="https://t.me/bscswapgroup" target="_blank" >Telegram</StyledAbsoluteLinkA> |
+        <StyledAbsoluteLinkA href="https://twitter.com/bSWAPDAO" target="_blank" >Twitter</StyledAbsoluteLinkA> |
+        <StyledAbsoluteLinkA href="https://discord.com/invite/mCZSA3w" target="_blank" >Discord</StyledAbsoluteLinkA> 
+        {/* <StyledIcon01 href="#"></StyledIcon01> */}
+
       </FLink01B>
     )
 }
@@ -134,14 +137,27 @@ const BinanceLogoLink = styled.a`
 
 const FooterBody = styled.div`
     display:block;
-    margin: 8px;
-    width:99%;
+    /* margin: 8px; */
+    width:100%;
     position: fixed;
     left: 0;
     bottom: 0;
     
 
 `
+
+const EthLogoLink = styled.a`
+
+    margin-right:15px;
+    position:relative; 
+
+    &:after{ content:""; width:1px; height:34px; background-color:#2a2a2a; display:block; border:none;  position:absolute; right:-5px; top:-18px; }    
+
+    &:hover {
+        opacity:0.7;
+    }
+`
+ 
 const Footer: React.FC = () => {
     
     return (
@@ -155,10 +171,30 @@ const Footer: React.FC = () => {
                     <Link02 />
                 </FooterCbox>
                 <BinanceLogo>
+                <EthLogoLink href="#" target="_blank"><img src={ELogo}  alt="Binance Logo"/> </EthLogoLink>
+
                     <BinanceLogoLink href="https://www.binance.org/en" target="_blank"><img src={BLogo} /> </BinanceLogoLink>
                 </BinanceLogo>
             </FooterFrame>
         </FooterBody>
     )}
 
+    
+    // return (
+    //     <FooterFrame>
+    //         <JRLogo>
+    //             <img style={{ position: 'absolute', left:10, top:-40}} src={FighterIcon} alt="Fighter" />
+    //         </JRLogo>
+    //         <FooterCbox>
+    //             <Link01 />
+    //             <Link02 />
+    //         </FooterCbox>
+    //         <BinanceLogo>
+            
+    //         <EthLogoLink href="#" target="_blank"><img src={ELogo}  alt="Binance Logo"/> </EthLogoLink>
+    //         <BinanceLogoLink href="https://www.binance.org/en" target="_blank"><img src={BLogo}  alt="Binance Logo"/> </BinanceLogoLink>
+    //         </BinanceLogo>
+    //     </FooterFrame>
+    
+    // )}
 export default Footer
